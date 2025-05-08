@@ -3,66 +3,76 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="24dp"
     android:gravity="center"
-    android:orientation="horizontal"
-    android:padding="24dp">
+    android:background="#CDD9C4">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-        
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
         <ImageView
             android:id="@+id/logoImage"
-            android:layout_width="120dp"
+            android:layout_width="207dp"
             android:layout_height="120dp"
-            android:src="@drawable/logo"
+            android:layout_marginBottom="24dp"
             android:contentDescription="Logo"
-            android:layout_marginBottom="24dp" />
+            android:src="@drawable/logotransparent1" />
 
         <TextView
             android:id="@+id/appTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
             android:text="VitalSmart"
+            android:textSize="40sp"
+            android:textStyle="bold"
             android:textColor="#1B5E20"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:layout_marginBottom="32dp" />
 
         <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="256dp"
+            android:id="@+id/email"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            android:hint="Username"
-            android:inputType="textEmailAddress" />
+            android:background="@drawable/roundtextfields"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:textColor="#1B5E20"
+            android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="256dp"
+            android:id="@+id/password"
+            android:layout_width="291dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
+            android:background="@drawable/roundtextfields"
             android:hint="Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textColor="#1B5E20"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="162dp"
-            android:layout_height="wrap_content"
+            android:layout_width="195dp"
+            android:layout_height="62dp"
             android:backgroundTint="#1B5E20"
             android:text="Login"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/tvRegister"
+            android:id="@+id/Register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:text="No account? Register"
-            android:textColor="@android:color/holo_blue_dark" />
+            android:textSize="15sp"
+            android:text="No account? Click Here to Register!"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 </LinearLayout>
 
