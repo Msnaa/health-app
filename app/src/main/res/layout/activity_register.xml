@@ -83,7 +83,7 @@
 
 
     <Button
-        android:id="@+id/registerBtn"
+        android:id="@+id/registerButton"
         android:layout_width="170dp"
         android:layout_height="65dp"
         android:backgroundTint="#1B5E20"

@@ -13,6 +13,10 @@
         android:theme="@style/Theme.HealthTrack"
         tools:targetApi="31">
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".VitalsActivity" />
+        <activity android:name=".SymptomsActivity" />
+        <activity android:name=".ReportActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CDD9C4"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logoutButton"
+        android:layout_marginBottom="149dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="207dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/logotransparent1" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="VitalSmart"
+            android:textColor="#1B5E20"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/vitalsButton"
+            android:layout_width="297dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#1B5E20"
+            android:text="Vitals Measurement"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/symptomsButton"
+            android:layout_width="297dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#1B5E20"
+            android:text="Symptoms Logging"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/reportButton"
+            android:layout_width="297dp"
+            android:layout_height="62dp"
+            android:backgroundTint="#1B5E20"
+            android:text="Report"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="195dp"
+        android:layout_height="62dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Logout"
+        android:textColor="#1B5E20"
+        android:textSize="18sp" />
+
+</RelativeLayout>
+
+
