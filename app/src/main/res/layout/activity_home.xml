@@ -37,7 +37,7 @@
             android:layout_height="62dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="#1B5E20"
-            android:text="Vitals Measurement"
+            android:text="Measure Your Vitals"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
@@ -47,7 +47,7 @@
             android:layout_height="62dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="#1B5E20"
-            android:text="Symptoms Logging"
+            android:text="Log Your Symptoms"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
@@ -56,7 +56,7 @@
             android:layout_width="297dp"
             android:layout_height="62dp"
             android:backgroundTint="#1B5E20"
-            android:text="Report"
+            android:text="View Health Reports"
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
     </LinearLayout>

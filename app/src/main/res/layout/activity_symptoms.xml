@@ -1,28 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CDD9C4"
     android:padding="24dp">
 
-    <Button
+    <ImageButton
         android:id="@+id/homeButton"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:backgroundTint="#FFFFFF"
-        android:textColor="#1B5E20"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/reportButton"
+    <TextView
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Report"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:text="Select Your Symptoms"
+        android:textColor="#1B5E20"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeButton" />
+
+    <CheckBox
+        android:id="@+id/fever"
+        android:layout_width="126dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="92dp"
+        android:buttonTint="#1B5E20"
+        android:text="Fever"
+        android:textColor="#1B5E20"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeButton" />
+
+    <SeekBar
+        android:id="@+id/feverSeverityBar"
+        android:layout_width="319dp"
+        android:layout_height="26dp"
+        android:max="4"
+        android:progress="2"
+        android:progressTint="#1B5E20"
+        android:thumbTint="#1B5E20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fever" />
+
+    <TextView
+        android:id="@+id/feverSeverityLevels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1                     2                     3                     4                     5"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/feverSeverityBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/fseverityLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Mild                                  Moderate                               Severe"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/feverSeverityLevels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/cough"
+        android:layout_width="145dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="68dp"
+        android:buttonTint="#1B5E20"
+        android:text="Cough"
+        android:textColor="#1B5E20"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fever" />
+
+    <SeekBar
+        android:id="@+id/coughSeverityBar"
+        android:layout_width="319dp"
+        android:layout_height="26dp"
+        android:max="4"
+        android:progress="2"
+        android:progressTint="#1B5E20"
+        android:thumbTint="#1B5E20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cough" />
+
+    <TextView
+        android:id="@+id/coughSeverityLevels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1                     2                     3                     4                     5"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/coughSeverityBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/cseverityLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Mild                                  Moderate                               Severe"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/coughSeverityLevels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/headache"
+        android:layout_width="151dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="68dp"
+        android:buttonTint="#1B5E20"
+        android:text="Headache"
+        android:textColor="#1B5E20"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cough" />
+
+    <SeekBar
+        android:id="@+id/headacheSeverityBar"
+        android:layout_width="319dp"
+        android:layout_height="26dp"
+        android:max="4"
+        android:progress="2"
+        android:progressTint="#1B5E20"
+        android:thumbTint="#1B5E20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headache" />
+
+    <TextView
+        android:id="@+id/headacheSeverityLevels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1                     2                     3                     4                     5"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/headacheSeverityBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/hseverityLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Mild                                  Moderate                               Severe"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/headacheSeverityLevels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/fatigue"
+        android:layout_width="144dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="68dp"
+        android:buttonTint="#1B5E20"
+        android:text="Fatigue"
+        android:textColor="#1B5E20"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headache" />
+
+    <SeekBar
+        android:id="@+id/fatigueSeverityBar"
+        android:layout_width="319dp"
+        android:layout_height="26dp"
+        android:max="4"
+        android:progress="2"
+        android:progressTint="#1B5E20"
+        android:thumbTint="#1B5E20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fatigue" />
+
+    <TextView
+        android:id="@+id/fatigueSeverityLevels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1                     2                     3                     4                     5"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/fatigueSeverityBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/faseverityLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Mild                                  Moderate                               Severe"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/fatigueSeverityLevels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/nausea"
+        android:layout_width="137dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="72dp"
+        android:buttonTint="#1B5E20"
+        android:text="Nausea"
+        android:textColor="#1B5E20"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fatigue" />
+
+    <SeekBar
+        android:id="@+id/nauseaSeverityBar"
+        android:layout_width="319dp"
+        android:layout_height="26dp"
+        android:max="4"
+        android:progress="2"
+        android:progressTint="#1B5E20"
+        android:thumbTint="#1B5E20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nausea" />
+
+    <TextView
+        android:id="@+id/nauseaSeverityLevels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1                     2                     3                     4                     5"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/nauseaSeverityBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/nseverityLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Mild                                  Moderate                               Severe"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/nauseaSeverityLevels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/soreThroat"
+        android:layout_width="176dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="68dp"
+        android:buttonTint="#1B5E20"
+        android:text="Sore Throat"
+        android:textColor="#1B5E20"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nausea" />
+
+    <SeekBar
+        android:id="@+id/throatSeverityBar"
+        android:layout_width="319dp"
+        android:layout_height="26dp"
+        android:max="4"
+        android:progress="2"
+        android:progressTint="#1B5E20"
+        android:thumbTint="#1B5E20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soreThroat" />
+
+    <TextView
+        android:id="@+id/throatSeverityLevels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1                     2                     3                     4                     5"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/throatSeverityBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tseverityLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Mild                                  Moderate                               Severe"
+        android:textColor="#1B5E20"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/throatSeverityLevels"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="114dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#FFFFFF"
+        android:text="Save"
         android:textColor="#1B5E20"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

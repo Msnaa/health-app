@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "642138691059",
+    "project_id": "vital-smart",
+    "storage_bucket": "vital-smart.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642138691059:android:3cf47f479d277df2a56e86",
+        "android_client_info": {
+          "package_name": "com.example.healthtrack"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7yWI8pN-fr4RTfuRhvifDpW-1jdmwlZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

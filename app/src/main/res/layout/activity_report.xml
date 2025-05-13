@@ -7,27 +7,27 @@
     android:background="#CDD9C4"
     android:padding="24dp">
 
-    <Button
+    <ImageButton
         android:id="@+id/homeButton"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:backgroundTint="#FFFFFF"
-        android:textColor="#1B5E20"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/shareButton"
-        android:layout_width="110dp"
-        android:layout_height="50dp"
+        android:layout_width="132dp"
+        android:layout_height="45dp"
         android:backgroundTint="#FFFFFF"
         android:text="Share"
         android:textColor="#1B5E20"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
